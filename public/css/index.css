@@ -1,0 +1,10 @@
+.jumbotron{
+	background:url(/image/index_back.jpg) center no-repeat; 
+	background-size: cover;
+}
+.login-form{
+	background-color: rgb(255,255,255,0.7);
+	border: solid 3px #6091d3;
+    border-radius: 10px;
+    padding: 5px;
+}
