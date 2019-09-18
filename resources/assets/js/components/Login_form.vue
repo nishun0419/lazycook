@@ -1,5 +1,6 @@
 <template>
-    <div class="jumbotron col-md-12">
+  <transition>
+    <div class="jumbotron col-md-12" v-show="show">
       <div class="conteiner">
         <div class="col-md-6 col-md-offset-3 login-form">
           <form action="#" method="#" v-on:submit.prevent="onSubmit">
@@ -16,6 +17,7 @@
         </div>
       </div>
     </div>
+  </transition>
 </template>
 
 <script>
@@ -23,12 +25,12 @@
 
       data() {
           return{
-            test: 'login'
+            show: true
           }
       },
       methods:{
         onSubmit() {
-            test = 'change'
+            this.show = false;
         }
       }
     }
