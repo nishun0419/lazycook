@@ -11,13 +11,17 @@
 |
 */
 
-Route::get('/', function () {
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/disptodo',function(){
+// 	return view('displayTodos');
+// });
+
+Route::get('/{any}', function () {
     return view('index');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/disptodo',function(){
-	return view('displayTodos');
-});
+})->where('any', '.*');
