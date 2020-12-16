@@ -396,7 +396,7 @@ elseif($_POST['route'] == 'checkindex'){
 		return true;
 	}
 	elseif($_POST['framework'] == 'Laravel'){
-		system('chmod 755 ./noindex.sh');
+		exec('chmod 777 noindex.sh');
 		$output = shell_exec("sh ./noindex.sh");
 
 		echo json_encode(array($output));
