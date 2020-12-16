@@ -399,7 +399,7 @@ elseif($_POST['route'] == 'checkindex'){
 		system('chmod 755 ./noindex.sh');
 		$output = shell_exec("sh ./noindex.sh");
 
-		echo json_encode(array('aaaa'));
+		echo json_encode(array($output));
 	}
 }
 else{
